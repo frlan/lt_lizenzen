@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Freie Software (miss)verstanden</title>
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/moon.css">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/my.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Softwarelizenzen</h1>
+					<p>Frank Lanitz <br/><a href="mailto:frank@lanitz.info">frank@lanitz.info</a></p>
+				</section>
+				<section>
+					<section>
+						<h2>Über mich</h2>
+						<ul>
+							<li>Entwickler</li>
+							<li>Hacker</li>
+							<li>System-Administrator</li>
+						</ul>
+						<br />
+						<br />
+						<img src="https://fsfe.org/graphics/fellowship/plussy_plain.svg" height="100px" />
+						<img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Geany_logo.svg" height="100px" />
+						<img src="https://eigenbaukombinat.de/wp-content/uploads/2015/04/banner2.png" height="100px" />
+						<img src="https://upload.wikimedia.org/wikipedia/de/thumb/d/d1/Logo_CCC.svg/230px-Logo_CCC.svg.png" height="100px" />
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Was ist eine Lizenz?</h>
+					</section>
+					<section>
+						<p>Irgendwas mit Urheberrecht</p>
+					</section>
+					<section>
+						<p>Jedes kreative Werk unterliegt in Deutschland einem Urheberrecht</p>
+						<p class="fragment">Ohne Einwilligung des Autors darf nichts geschehen</p>
+						<p class="fragment">Kein Kopieren</p>
+						<p class="fragment">Kein Verändern</p>
+						<p class="fragment">Kein Nutzen!</p>
+					</section>
+					<section>
+						<p>Es gibt eine Schöpfungshöhe</p>
+					</section>
+					<section>
+						<h2>Hallo Welt</h2>
+						<cpde><pre>
+-module(hallo).
+-export([hallo_welt/0]).
+
+hallo_welt() -> io:fwrite("Hallo Welt!\n").
+						</pre></cpde>
+					</section>
+					<section>
+						<code><pre>
+#!/usr/bin/env python3
+
+  ############                   ############
+  ############                   ############
+  ############                   ############
+################              ##################
+###################        #####################
+################################################
+################################################
+################################################
+########                                ########
+########    ####                ####    ########
+########    ####                ####    ########
+########    ####                ####    ########
+########                                ########
+########        ####         ####       ########
+########        ####         ####       ########
+print('Hallo Welt') #############       ########
+########        #################       ########
+    ########                        ########
+    ########                        ########
+        ################################
+        ################################
+
+						</pre></code>
+					</section>
+					<section>
+						<h2>Proprietäre Lizenzen</h2>
+						<ul>
+							<li>Meist sehr einschränkend
+								<ul>
+									<li class="fragment">... Nur bestimmte Dinge nutzen</li>
+									<li class="fragment">... Sonderrechte für den Hersteller</li>
+									<li class="fragment">... Oftmals Verbot von Weitergabe</li>
+								</ul>
+							</li>
+							<li  class="fragment">Unverständlich</li>
+							<li  class="fragment">(Fast) beliebiger Inhalt -- Lesen!</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Freie Lizenen</h2>
+						<p>Vier Grundrechte für den Nutzer</p>
+					</section>
+					<section>
+						<h3>Die vier Freiheiten</h3>
+						<ul>
+							<li class="fragment">Die Freiheit, das Programm auszuführen wie man möchte, für jeden Zweck</li>
+							<li class="fragment">Die Freiheit, die Funktionsweise des Programms zu untersuchen und eigenen Datenverarbeitungbedürfnissen anzupassen.</li>
+							<li class="fragment">Die Freiheit, das Programm zu redistribuieren und damit seinen Mitmenschen zu helfen. </li>
+							<li class="fragment">Die Freiheit, das Programm zu verbessern und diese Verbesserungen der Öffentlichkeit freizugeben, damit die gesamte Gesellschaft davon profitiert.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Beispiele</h3>
+						<ul>
+							<li>GPL</li>
+							<li>BSD</li>
+							<li>Apache</li>
+							<li>MIT</li>
+							<li>Creative Commons</li>
+						</ul>
+						<p class="fragment">Unterschieden sich im Detail.</p>
+					</section>
+				</section>
+				<section>
+					<h1>Bedarf zum Reden?</h1>
+					<p>Ich suche mit Euch die richtige Lizenz heraus</p>
+				</section>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'reveal.js/plugin/markdown/marked.js' },
+					{ src: 'reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
